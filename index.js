@@ -17,6 +17,7 @@ express()
   .post('/slack/events', (req, res) => {
     let body = req.body;
     let event = body.event;
+    console.dir(body);
 
     if(body.type === 'event_callback') {
       if(event.type === 'message') {
